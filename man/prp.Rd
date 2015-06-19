@@ -28,6 +28,6 @@ prp(path, scriptName, remoteName, verbose = FALSE)
 }
 }
 \seealso{
-\code{\link{pull}} and \code{\link{push}} to sync files, and \code{\link{run}} to run script remotely
+\code{\link{pull}} and \code{\link{push}} to sync files, and \code{\link{run}} to run script remotely.  See \code{\link{rbLib-package}} for overview.
 }
 

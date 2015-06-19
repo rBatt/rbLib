@@ -28,6 +28,6 @@ run(scriptName, path, remoteName, verbose = FALSE)
 }
 }
 \seealso{
-\code{\link{pull}} for the pulling in remote files, \code{\link{push}} to push a local file to the remote server, and \code{\link{prp}} to push run pull.
+\code{\link{pull}} for the pulling in remote files, \code{\link{push}} to push a local file to the remote server, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
 }
 

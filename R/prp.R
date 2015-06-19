@@ -10,7 +10,7 @@
 #' @details
 #'Works via ssh and rsync. Can push all files in a folder, or a specific file in the specified path. The only files that are altered remotely are those that a newer locally (or only present locally). Will not delete a remote file if it isn't already present locally, and will not overwrite a remote file if the local version is older (or absent). Does not change local files. Assumes local and remote file paths are identical.
 #'
-#' @seealso \code{\link{pull}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull.
+#' @seealso \code{\link{pull}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
 #'
 #' @examples
 #' \dontrun{
@@ -55,7 +55,7 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 #' @param remoteName Character string for remote server in username@@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}
 #' @param verbose logical. print extra output.
 #'
-#' @seealso \code{\link{pull}} for the pulling in remote files, \code{\link{push}} to push a local file to the remote server, and \code{\link{prp}} to push run pull.
+#' @seealso \code{\link{pull}} for the pulling in remote files, \code{\link{push}} to push a local file to the remote server, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
 #'
 #' @examples
 #' \dontrun{
@@ -89,7 +89,7 @@ run <- function(scriptName, path, remoteName, verbose=FALSE){
 #' @param fileName Character string of file within \code{path} to be pulled. If \code{""}, all files in \code{path} are pulled
 #' @param verbose logical. print extra output.
 #'
-#' @seealso \code{\link{push}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull.
+#' @seealso \code{\link{push}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
 #'
 #' @examples
 #' \dontrun{
@@ -139,7 +139,7 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 #' @param remoteName Character string for remote server in username@@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}
 #' @param verbose logical. print extra output.
 #'
-#' @seealso \code{\link{pull}} and \code{\link{push}} to sync files, and \code{\link{run}} to run script remotely
+#' @seealso \code{\link{pull}} and \code{\link{push}} to sync files, and \code{\link{run}} to run script remotely.  See \code{\link{rbLib-package}} for overview.
 #'
 #' @examples
 #' \dontrun{

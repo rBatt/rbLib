@@ -31,6 +31,6 @@ Works via ssh and rsync. Can push all files in a folder, or a specific file in t
 }
 }
 \seealso{
-\code{\link{pull}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull.
+\code{\link{pull}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
 }
 

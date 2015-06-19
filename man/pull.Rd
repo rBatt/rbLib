@@ -28,6 +28,6 @@ pull(path, remoteName, fileName = "", verbose = FALSE)
 }
 }
 \seealso{
-\code{\link{push}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull.
+\code{\link{push}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
 }
 

@@ -1,0 +1,10 @@
+Package: rbLib
+Title: Library of RB's helper functions
+Version: 0.0.1
+Authors@R: person('Ryan', 'Batt', email='battrd@gmail.com', role=c('aut','cre'))
+Description: Compendium of functions that RB has found useful in a variety of projects, and others might find useful to use.
+Depends: R (>= 3.1.2)
+License: MIT + file LICENSE
+Imports:
+	ssh.utils
+LazyData: true

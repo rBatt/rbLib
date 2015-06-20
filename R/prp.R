@@ -17,7 +17,6 @@
 #'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
 #'	scriptName <- "reset.sim.R"
 #'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	sync=TRUE
 #'	(push(path, remoteName, fileName=scriptName))
 #' }
 push <- function(path, remoteName, fileName="", verbose=FALSE){
@@ -62,7 +61,6 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 #'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
 #'	scriptName <- "reset.sim.R"
 #'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	sync=TRUE
 #'	(run(scriptName, path, remoteName))
 #' }
 run <- function(scriptName, path, remoteName, verbose=FALSE){
@@ -99,7 +97,6 @@ run <- function(scriptName, path, remoteName, verbose=FALSE){
 #'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
 #'	scriptName <- "reset.sim.R"
 #'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	sync=TRUE
 #'	(pull(path, remoteName, fileName=""))
 #' }
 pull <- function(path, remoteName, fileName="", verbose=FALSE){
@@ -149,7 +146,6 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 #'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
 #'	scriptName <- "reset.sim.R"
 #'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	sync=TRUE
 #'	prp(path, scriptName, remoteName, verbose=TRUE)
 #' }
 prp <- function(path, scriptName, remoteName, verbose=FALSE){	

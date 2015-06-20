@@ -26,7 +26,6 @@ Works via ssh and rsync. Can push all files in a folder, or a specific file in t
 	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
 	scriptName <- "reset.sim.R"
 	remoteName="ryanb@amphiprion.deenr.rutgers.edu"
-	sync=TRUE
 	(push(path, remoteName, fileName=scriptName))
 }
 }

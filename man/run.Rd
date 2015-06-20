@@ -23,7 +23,6 @@ run(scriptName, path, remoteName, verbose = FALSE)
 	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
 	scriptName <- "reset.sim.R"
 	remoteName="ryanb@amphiprion.deenr.rutgers.edu"
-	sync=TRUE
 	(run(scriptName, path, remoteName))
 }
 }

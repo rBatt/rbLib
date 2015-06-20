@@ -19,3 +19,12 @@ notifications:
   email:
     on_success: change
     on_failure: change
+
+r_apt_packages:
+  - knitr
+
+r_github_packages:
+  - jimhester/covr
+  
+r_binary_packages:
+  - ssh.utils

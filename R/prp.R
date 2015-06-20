@@ -52,7 +52,7 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 #'
 #' @param scriptName Character string indicating the name of the script to be run
 #' @param path Character string for path to script. Must end with a "/"
-#' @param remoteName Character string for remote server in username@@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}
+#' @param remoteName Character string for remote server in username@@place.edu format. See \code{run.remote} in the package \code{ssh.utils}
 #' @param verbose logical. print extra output.
 #'
 #' @seealso \code{\link{pull}} for the pulling in remote files, \code{\link{push}} to push a local file to the remote server, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
@@ -66,17 +66,20 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 #'	(run(scriptName, path, remoteName))
 #' }
 run <- function(scriptName, path, remoteName, verbose=FALSE){
-	require(ssh.utils)
-	# from remote, run script
-	rr.cmd.cd <- paste0("cd \'", path, "\'")
-	rr.cmd <- paste0("nohup R CMD BATCH ", scriptName, " &")
-	blah <- run.remote(paste0(rr.cmd.cd, ";", rr.cmd), remote=remoteName)
+	# if(require(ssh.utils)){
+		# from remote, run script
+		rr.cmd.cd <- paste0("cd \'", path, "\'")
+		rr.cmd <- paste0("nohup R CMD BATCH ", scriptName, " &")
+		blah <- run.remote(paste0(rr.cmd.cd, ";", rr.cmd), remote=remoteName)
 	
-	if(verbose){
-		blah
-	}else{
-		invisible(blah)
-	}
+		if(verbose){
+			blah
+		}else{
+			invisible(blah)
+		}
+	# }else{
+# 		print("Please install ssh.utils to run scripts remotely.")
+# 	}
 }
 
 
@@ -85,7 +88,7 @@ run <- function(scriptName, path, remoteName, verbose=FALSE){
 #' \code{push} makes a local copy of a new or updated remote file(s)
 #'
 #' @param path Character string for path to be pulled, or path containing file to be pulled
-#' @param remoteName Character string for remote server in username@@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}
+#' @param remoteName Character string for remote server in username@@place.edu format. See \code{run.remote} in the package \code{ssh.utils}
 #' @param fileName Character string of file within \code{path} to be pulled. If \code{""}, all files in \code{path} are pulled
 #' @param verbose logical. print extra output.
 #'
@@ -136,7 +139,7 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 #'
 #' @param path Character string for path to be pulled, or path containing file to be pulled
 #' @param scriptName Character string of the script to be run
-#' @param remoteName Character string for remote server in username@@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}
+#' @param remoteName Character string for remote server in username@@place.edu format. See \code{run.remote} in the package \code{ssh.utils}
 #' @param verbose logical. print extra output.
 #'
 #' @seealso \code{\link{pull}} and \code{\link{push}} to sync files, and \code{\link{run}} to run script remotely.  See \code{\link{rbLib-package}} for overview.
@@ -149,7 +152,7 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 #'	sync=TRUE
 #'	prp(path, scriptName, remoteName, verbose=TRUE)
 #' }
-prp <- function(path, scriptName, remoteName, verbose=FALSE){
+prp <- function(path, scriptName, remoteName, verbose=FALSE){	
 	if(verbose){cat("pushing\n")}
 	push(path, remoteName, fileName=scriptName, verbose=verbose)
 	

@@ -11,7 +11,7 @@ run(scriptName, path, remoteName, verbose = FALSE)
 
 \item{path}{Character string for path to script. Must end with a "/"}
 
-\item{remoteName}{Character string for remote server in username@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}}
+\item{remoteName}{Character string for remote server in username@place.edu format. See \code{run.remote} in the package \code{ssh.utils}}
 
 \item{verbose}{logical. print extra output.}
 }

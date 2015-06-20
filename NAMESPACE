@@ -1,1 +1,6 @@
 exportPattern("^[^\\.]")
+export(prp)
+export(pull)
+export(push)
+export(run)
+import(ssh.utils)

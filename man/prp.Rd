@@ -11,7 +11,7 @@ prp(path, scriptName, remoteName, verbose = FALSE)
 
 \item{scriptName}{Character string of the script to be run}
 
-\item{remoteName}{Character string for remote server in username@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}}
+\item{remoteName}{Character string for remote server in username@place.edu format. See \code{run.remote} in the package \code{ssh.utils}}
 
 \item{verbose}{logical. print extra output.}
 }

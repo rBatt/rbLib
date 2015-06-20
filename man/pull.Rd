@@ -9,7 +9,7 @@ pull(path, remoteName, fileName = "", verbose = FALSE)
 \arguments{
 \item{path}{Character string for path to be pulled, or path containing file to be pulled}
 
-\item{remoteName}{Character string for remote server in username@place.edu format. See \code{\link{run.remote}} in the package \code{ssh.utils}}
+\item{remoteName}{Character string for remote server in username@place.edu format. See \code{run.remote} in the package \code{ssh.utils}}
 
 \item{fileName}{Character string of file within \code{path} to be pulled. If \code{""}, all files in \code{path} are pulled}
 

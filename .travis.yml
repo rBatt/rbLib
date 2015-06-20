@@ -2,6 +2,8 @@
 
 language: r
 
+sudo: required
+
 before_install:
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
   - chmod 755 ./travis-tool.sh
@@ -26,5 +28,5 @@ r_apt_packages:
 r_github_packages:
   - jimhester/covr
   
-r_binary_packages:
+r_packages:
   - ssh.utils

@@ -1,4 +1,4 @@
-[![Travis-CI Build Status](https://travis-ci.org/rBatt/rbLib.png?branch=master)](https://travis-ci.org/rBatt/rbLib)
+[![Travis-CI Build Status](https://travis-ci.org/rBatt/rbLib.svg?branch=master)](https://travis-ci.org/rBatt/rbLib)
 
 ================
 ## RB Lib

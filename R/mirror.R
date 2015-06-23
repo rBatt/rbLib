@@ -16,10 +16,10 @@
 #' \dontrun{
 #' # I have a project in a folder called 'CyanoIso'
 #' # I want two copies of this folder and its contents on my computer
-#'	from <- "Documents/School&Work/WiscResearch/CyanoIso/"
-#'	to <- "Dropbox/Cyanotopes/CyanoIso/" # omitting last slash creates extra copy
-#'  exclude <- c(".git", "Data")
-#'	(mirror(from, to, exclude))
+#' from <- "Documents/School&Work/WiscResearch/CyanoIso/"
+#' to <- "Dropbox/Cyanotopes/CyanoIso/" # omitting last slash creates extra copy
+#' exclude <- c(".git", "Data")
+#' (mirror(from, to, exclude))
 #' }
 mirror <- function(from, to, exclude=""){
 	# sync a and b	

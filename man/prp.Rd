@@ -20,10 +20,10 @@ prp(path, scriptName, remoteName, verbose = FALSE)
 }
 \examples{
 \dontrun{
-	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
-	scriptName <- "reset.sim.R"
-	remoteName="ryanb@amphiprion.deenr.rutgers.edu"
-	prp(path, scriptName, remoteName, verbose=TRUE)
+path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
+scriptName <- "reset.sim.R"
+remoteName <- "ryanb@amphiprion.deenr.rutgers.edu"
+prp(path, scriptName, remoteName, verbose=TRUE)
 }
 }
 \seealso{

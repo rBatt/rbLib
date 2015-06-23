@@ -26,10 +26,10 @@ When syncing the contents of a directory, remember that it is important to inclu
 \dontrun{
 # I have a project in a folder called 'CyanoIso'
 # I want two copies of this folder and its contents on my computer
-	a <- "Documents/School&Work/WiscResearch/CyanoIso/"
-	b <- "Dropbox/Cyanotopes/CyanoIso/" # omitting last slash creates extra copy
- exclude <- c(".git", "Data")
-	(sync(a, b, exclude))
+a <- "Documents/School&Work/WiscResearch/CyanoIso/"
+b <- "Dropbox/Cyanotopes/CyanoIso/" # omitting last slash creates extra copy
+exclude <- c(".git", "Data")
+(sync(a, b, exclude))
 }
 }
 \seealso{

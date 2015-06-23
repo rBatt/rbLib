@@ -20,10 +20,10 @@ pull(path, remoteName, fileName = "", verbose = FALSE)
 }
 \examples{
 \dontrun{
-	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
-	scriptName <- "reset.sim.R"
-	remoteName="ryanb@amphiprion.deenr.rutgers.edu"
-	(pull(path, remoteName, fileName=""))
+path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
+scriptName <- "reset.sim.R"
+remoteName <- "ryanb@amphiprion.deenr.rutgers.edu"
+(pull(path, remoteName, fileName=""))
 }
 }
 \seealso{

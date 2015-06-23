@@ -14,10 +14,10 @@
 #'
 #' @examples
 #' \dontrun{
-#'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
-#'	scriptName <- "reset.sim.R"
-#'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	(push(path, remoteName, fileName=scriptName))
+#' path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
+#' scriptName <- "reset.sim.R"
+#' remoteName <- "ryanb@@amphiprion.deenr.rutgers.edu"
+#' (push(path, remoteName, fileName=scriptName))
 #' }
 push <- function(path, remoteName, fileName="", verbose=FALSE){
 	# from local, push script to remote
@@ -58,10 +58,10 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 #'
 #' @examples
 #' \dontrun{
-#'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
-#'	scriptName <- "reset.sim.R"
-#'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	(run(scriptName, path, remoteName))
+#' path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
+#' scriptName <- "reset.sim.R"
+#' remoteName <- "ryanb@@amphiprion.deenr.rutgers.edu"
+#' (run(scriptName, path, remoteName))
 #' }
 run <- function(scriptName, path, remoteName, verbose=FALSE){
 	# if(require(ssh.utils)){
@@ -94,10 +94,10 @@ run <- function(scriptName, path, remoteName, verbose=FALSE){
 #'
 #' @examples
 #' \dontrun{
-#'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
-#'	scriptName <- "reset.sim.R"
-#'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	(pull(path, remoteName, fileName=""))
+#' path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
+#' scriptName <- "reset.sim.R"
+#' remoteName <- "ryanb@@amphiprion.deenr.rutgers.edu"
+#' (pull(path, remoteName, fileName=""))
 #' }
 pull <- function(path, remoteName, fileName="", verbose=FALSE){
 	ss1 <- fileSnapshot(path, full.names=TRUE)
@@ -143,10 +143,10 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 #'
 #' @examples
 #' \dontrun{
-#'	path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
-#'	scriptName <- "reset.sim.R"
-#'	remoteName="ryanb@@amphiprion.deenr.rutgers.edu"
-#'	prp(path, scriptName, remoteName, verbose=TRUE)
+#' path <- "./Documents/School&Work/NCEAS_UnderIce/core/scripts/analysis/"
+#' scriptName <- "reset.sim.R"
+#' remoteName <- "ryanb@@amphiprion.deenr.rutgers.edu"
+#' prp(path, scriptName, remoteName, verbose=TRUE)
 #' }
 prp <- function(path, scriptName, remoteName, verbose=FALSE){	
 	if(verbose){cat("pushing\n")}

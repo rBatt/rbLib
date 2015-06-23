@@ -19,3 +19,9 @@ These scripts were written specifically for the case where the local system is r
 \code{\link{prp}} to push to a server, then run script there, then pull from it
 }
 
+\section{Generic Syncing}{
+
+\code{\link{sync}} similar to a \code{\link{push}} followed by a \code{\link{pull}}, except more generic in that it doesn't assume one location is remote, the two locations don't need to have same path (necessary if both are local), and includes option to exclude certain directories/ files. Never deletes files.
+\code{\link{mirror}} like \code{\link{sync}}, but unidirectional and deletes files at the destination that are not present in the source.
+}
+

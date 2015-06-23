@@ -11,7 +11,7 @@
 #'
 #' @seealso \code{\link{mirror}} if the contens of a master directory should be copied to a backup directory, potentially deleting files in the backup that are not contained in the master. See \code{\link{rbLib-package}} for package overview.
 #'
-#' @ note When syncing the contents of a directory, remember that it is important to include a forward slash (\code{/}) at the end of both paths \code{a} and \code{b}; omitting in the second will create an extra copy in the first. If slash omitted from both, the top level name will exist 3 times and include two replicates. This is just basic \code{rsync} syntax, but it is easy to forget.
+#' @note When syncing the contents of a directory, remember that it is important to include a forward slash (\code{/}) at the end of both paths \code{a} and \code{b}; omitting in the second will create an extra copy in the first. If slash omitted from both, the top level name will exist 3 times and include two replicates. This is just basic \code{rsync} syntax, but it is easy to forget.
 #' @examples
 #' \dontrun{
 #' # I have a project in a folder called 'CyanoIso'

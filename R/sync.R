@@ -4,6 +4,7 @@
 #'
 #' @param a path of one directory
 #' @param b path of a second directory
+#' @param exclude character vector of files or folders to exclude; paths are relative
 #'
 #' @details
 #' Uses 2 consecutive calls to rsync, switch the order of the path arguments between the 2 calls. First time copies files from a to b, second time it copies files from b to a. Specifically, the command is \code{rsync -azuP --stats "a" "b"}, followed by \code{rsync -azuP --stats "b" "a"}. The \code{-a} is arhive mode (recursive, most file attributes), \code{-z} enables compression, \code{-u} only moves files that are new or updated, and \code{-P} prints progress. \code{--stats} prints more information. No files are ever deleted. I.e., the directories end up containing the most up-to-date files in both directories, and files previously only contained in one directory are simply copied to the other.

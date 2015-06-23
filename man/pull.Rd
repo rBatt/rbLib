@@ -16,7 +16,7 @@ pull(path, remoteName, fileName = "", verbose = FALSE)
 \item{verbose}{logical. print extra output.}
 }
 \description{
-\code{push} makes a local copy of a new or updated remote file(s)
+\code{pull} makes a local copy of a new or updated remote file(s)
 }
 \examples{
 \dontrun{

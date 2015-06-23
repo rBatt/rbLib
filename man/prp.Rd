@@ -16,7 +16,7 @@ prp(path, scriptName, remoteName, verbose = FALSE)
 \item{verbose}{logical. print extra output.}
 }
 \description{
-\code{push} Push local updates to remote, run script remotely, then pull remote updates to local
+\code{prp} pushes local updates to remote, runs script remotely, then pulls remote updates to local
 }
 \examples{
 \dontrun{

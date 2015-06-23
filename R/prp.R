@@ -47,7 +47,7 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 
 #' Run a remote script remotely
 #'
-#' \code{run} runs an R script remotely
+#' @description \code{run} runs an R script remotely
 #'
 #' @param scriptName Character string indicating the name of the script to be run
 #' @param path Character string for path to script. Must end with a "/"
@@ -83,7 +83,7 @@ run <- function(scriptName, path, remoteName, verbose=FALSE){
 
 #' Pull remote files to local system
 #'
-#' \code{push} makes a local copy of a new or updated remote file(s)
+#' @description \code{pull} makes a local copy of a new or updated remote file(s)
 #'
 #' @param path Character string for path to be pulled, or path containing file to be pulled
 #' @param remoteName Character string for remote server in username@@place.edu format. See \code{run.remote} in the package \code{ssh.utils}
@@ -132,7 +132,7 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 
 #' Push, Run, then Pull
 #'
-#' \code{push} Push local updates to remote, run script remotely, then pull remote updates to local
+#' @description \code{prp} pushes local updates to remote, runs script remotely, then pulls remote updates to local
 #'
 #' @param path Character string for path to be pulled, or path containing file to be pulled
 #' @param scriptName Character string of the script to be run

@@ -23,7 +23,7 @@
 #' }
 mirror <- function(from, to, exclude=""){
 	# sync a and b	
-	rsync.cmd0 <- "rsync -azuP --stats "
+	rsync.cmd0 <- "rsync -azuP --stats --delete "
 	
 	exclude2 <- paste0("\'", exclude, "\'")
 	ex <- paste0("--exclude ", exclude2, collapse=" ")

@@ -33,6 +33,6 @@ exclude <- c(".git", "Data")
 }
 }
 \seealso{
-\code{\link{mirror}} if the contens of a master directory should be copied to a backup directory, potentially deleting files in the backup that are not contained in the master. See \code{\link{rbLib-package}} for package overview.
+Use \code{\link{mirror}} if the contents of a master directory should be copied to a backup directory, potentially deleting files in the backup that are not contained in the master. See \code{\link{rbLib-package}} for package overview.
 }
 

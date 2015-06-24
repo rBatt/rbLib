@@ -4,7 +4,7 @@
 \alias{run}
 \title{Run a remote script remotely}
 \usage{
-run(scriptName, path, remoteName, verbose = FALSE)
+run(scriptName, path, remoteName, verbose = FALSE, debugMode = FALSE)
 }
 \arguments{
 \item{scriptName}{Character string indicating the name of the script to be run}
@@ -14,6 +14,8 @@ run(scriptName, path, remoteName, verbose = FALSE)
 \item{remoteName}{Character string for remote server in username@place.edu format. See \code{run.remote} in the package \code{ssh.utils}}
 
 \item{verbose}{logical. print extra output.}
+
+\item{debugMode}{logical. whether the run should load a file called '.RData' present in the directory, and if it should save a file (image) by the same name on exit.}
 }
 \description{
 \code{run} runs an R script remotely

@@ -53,6 +53,7 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 #' @param path Character string for path to script. Must end with a "/"
 #' @param remoteName Character string for remote server in username@@place.edu format. See \code{run.remote} in the package \code{ssh.utils}
 #' @param verbose logical. print extra output.
+#' @param debugMode logical. whether the run should load a file called '.RData' present in the directory, and if it should save a file (image) by the same name on exit.
 #'
 #' @seealso \code{\link{pull}} for the pulling in remote files, \code{\link{push}} to push a local file to the remote server, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.
 #'
@@ -63,11 +64,15 @@ push <- function(path, remoteName, fileName="", verbose=FALSE){
 #' remoteName <- "ryanb@@amphiprion.deenr.rutgers.edu"
 #' (run(scriptName, path, remoteName))
 #' }
-run <- function(scriptName, path, remoteName, verbose=FALSE){
+run <- function(scriptName, path, remoteName, verbose=FALSE, debugMode=FALSE){
 	# if(require(ssh.utils)){
 		# from remote, run script
 		rr.cmd.cd <- paste0("cd \'", path, "\'")
-		rr.cmd <- paste0("nohup R CMD BATCH ", scriptName, " &")
+		if(debugMode){
+			rr.cmd <- paste0("nohup R CMD BATCH ", scriptName, " &")
+		}else{
+			rr.cmd <- paste0("nohup R CMD BATCH --vanilla --no-save ", scriptName, " &")
+		}
 		blah <- run.remote(paste0(rr.cmd.cd, ";", rr.cmd), remote=remoteName)
 	
 		if(verbose){
@@ -138,6 +143,7 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 #' @param scriptName Character string of the script to be run
 #' @param remoteName Character string for remote server in username@@place.edu format. See \code{run.remote} in the package \code{ssh.utils}
 #' @param verbose logical. print extra output.
+#' @param debugMode logical. whether the run should load a file called '.RData' present in the directory, and if it should save a file (image) by the same name on exit.
 #'
 #' @seealso \code{\link{pull}} and \code{\link{push}} to sync files, and \code{\link{run}} to run script remotely.  See \code{\link{rbLib-package}} for overview.
 #'
@@ -148,12 +154,12 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE){
 #' remoteName <- "ryanb@@amphiprion.deenr.rutgers.edu"
 #' prp(path, scriptName, remoteName, verbose=TRUE)
 #' }
-prp <- function(path, scriptName, remoteName, verbose=FALSE){	
+prp <- function(path, scriptName, remoteName, verbose=FALSE, debugMode=FALSE){	
 	if(verbose){cat("pushing\n")}
 	push(path, remoteName, fileName=scriptName, verbose=verbose)
 	
 	if(verbose){cat("running\n")}
-	run(scriptName, path, remoteName, verbose=verbose)
+	run(scriptName, path, remoteName, verbose=verbose, debugMode=debugMode)
 	
 	if(verbose){cat("pulling\n")}
 	pull(path, remoteName, fileName="", verbose=verbose)

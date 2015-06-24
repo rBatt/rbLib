@@ -4,7 +4,7 @@
 \alias{prp}
 \title{Push, Run, then Pull}
 \usage{
-prp(path, scriptName, remoteName, verbose = FALSE)
+prp(path, scriptName, remoteName, verbose = FALSE, debugMode = FALSE)
 }
 \arguments{
 \item{path}{Character string for path to be pulled, or path containing file to be pulled}
@@ -14,6 +14,8 @@ prp(path, scriptName, remoteName, verbose = FALSE)
 \item{remoteName}{Character string for remote server in username@place.edu format. See \code{run.remote} in the package \code{ssh.utils}}
 
 \item{verbose}{logical. print extra output.}
+
+\item{debugMode}{logical. whether the run should load a file called '.RData' present in the directory, and if it should save a file (image) by the same name on exit.}
 }
 \description{
 \code{prp} pushes local updates to remote, runs script remotely, then pulls remote updates to local

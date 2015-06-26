@@ -17,6 +17,12 @@
 	#' \code{\link{mirror}} \tab like \code{\link{sync}}, but unidirectional and deletes files at the destination that are not present in the source. \cr
 #'	}
 #'
+#' @section Graphics:
+#' Convenient functions for making graphs. Relies heavily on base graphics. Some functions focus on a particular aesthetic, others on creating a full figure.
+#' \tabular{ll}{
+	#' \code{\link{add.alpha}} \tab add transparency to a color \cr
+#'	}
+#'
 #' @docType package
 #' @name rbLib
 NULL

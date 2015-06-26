@@ -21,6 +21,7 @@
 #' Convenient functions for making graphs. Relies heavily on base graphics. Some functions focus on a particular aesthetic, others on creating a full figure.
 #' \tabular{ll}{
 	#' \code{\link{add.alpha}} \tab add transparency to a color \cr
+	#' \code{\link{auto.mfrow}} \tab automatically select reasonable dimensions for figure panels
 #'	}
 #'
 #' @docType package

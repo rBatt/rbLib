@@ -9,12 +9,13 @@
 #' @details
 #' Pretty sure I got the code (or inspiration) \href{# http://www.magesblog.com/2013/04/how-to-change-alpha-value-of-colours-in.html}{here}. This function is simple (the code is just 1 line), but it is quick and convenient.
 #'
-#' @seealso See \code{\link{rgb}}, \code{\link{colors}}, \code{\link{colorRampPalette}} for base functions handling colors that I use oftne. See \code{\link{rbLib-package}} for package overview.
+#' @seealso See \code{\link{rgb}}, \code{\link{colors}}, \code{\link{colorRampPalette}}, \code{\link{adjustcolor}} for base functions handling colors. See \code{\link{rbLib-package}} for package overview.
 #'
 #' @examples
 #' N <- 10
 #' blues <- add.alpha("blue", seq(0.1,1, length.out=N))
 #' plot(1:N, col=blues, pch=19)
+#' b2r <- coloRampPallet
 #'
 #' ba <- add.alpha("blue", alpha=0.25)
 #' ra <- add.alpha("red", alpha=1)

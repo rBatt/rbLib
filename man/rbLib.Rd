@@ -32,7 +32,8 @@ Note that these scripts were written specifically for the case where the local s
 Convenient functions for making graphs. Relies heavily on base graphics. Some functions focus on a particular aesthetic, others on creating a full figure.
 \tabular{ll}{
 \code{\link{add.alpha}} \tab add transparency to a color \cr
-\code{\link{auto.mfrow}} \tab automatically select reasonable dimensions for figure panels
+\code{\link{auto.mfrow}} \tab automatically arrange panels in a figure \cr
+\code{\link{get.layout}} \tab define \code{\link{layout}} matrix from dimensions and relative widths \cr
 	}
 }
 

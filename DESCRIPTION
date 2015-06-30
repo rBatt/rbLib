@@ -1,10 +1,11 @@
 Package: rbLib
 Title: Library of RB's helper functions
-Version: 0.0.1
+Version: 0.0.2
 Date: 2015-06-23
 Authors@R: person('Ryan D.', 'Batt', email='battrd@gmail.com', role=c('aut','cre'))
 Description: Compendium of functions that RB has found useful in a variety of projects, and others might find useful to use.
-Depends: R (>= 3.1.2), ssh.utils
+Depends: R (>= 3.1.2)
+Imports: ssh.utils, numbers
 License: MIT + file LICENSE
 LazyData: true
 Suggests: knitr, covr

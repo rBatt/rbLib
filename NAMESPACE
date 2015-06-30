@@ -1,6 +1,15 @@
 exportPattern("^[^\\.]")
+
 export(prp)
 export(pull)
 export(push)
 export(run)
+export(mirror)
+export(sync)
+
+export(add.alpha)
+export(auto.mfrow)
+export(get.layout)
+
+import(numbers)
 import(ssh.utils)

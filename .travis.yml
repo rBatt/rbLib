@@ -30,3 +30,4 @@ r_github_packages:
   
 r_packages:
   - ssh.utils
+  - numbers

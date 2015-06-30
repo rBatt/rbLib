@@ -15,7 +15,7 @@
 #' N <- 10
 #' blues <- add.alpha("blue", seq(0.1,1, length.out=N))
 #' plot(1:N, col=blues, pch=19)
-#' b2r <- coloRampPallet
+#' b2r <- colorRampPalette
 #'
 #' ba <- add.alpha("blue", alpha=0.25)
 #' ra <- add.alpha("red", alpha=1)

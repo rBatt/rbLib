@@ -6,7 +6,7 @@
 #' @param tall logical, if FALSE (the default), non-square panel arrangements will have more columns than rows (e.g., \code{mfrow=c(2,3)}).
 #'
 #' @details 
-#' \code{auto.mfrow} will often produce figures with "empty" panels – \code{auto.mfrow} does not (necessarily) find dimenions suitable for publication, as for prime numbers this would often lead to 1-by-X or X-by-1 dimensions that would run off the screen/ page when \code{x} was large, which \code{auto.mfrow} avoids by permitting ampty panels. The ideal balance between non-square panel dimenions and empty panels is subjective, but the dimensions are found by the values of \code{nr} and \code{nc} that minimize the following expression: \code{abs(sqrt(x)-(nr)) + abs(sqrt(x)-(nc)) + abs(nr*nc-x)}, with output switching between nr-by-nc and nc-by-nr depending on the value of \code{tall}).
+#' \code{auto.mfrow} will often produce figures with "empty" panels - \code{auto.mfrow} does not (necessarily) find dimenions suitable for publication, as for prime numbers this would often lead to 1-by-X or X-by-1 dimensions that would run off the screen/ page when \code{x} was large, which \code{auto.mfrow} avoids by permitting ampty panels. The ideal balance between non-square panel dimenions and empty panels is subjective, but the dimensions are found by the values of \code{nr} and \code{nc} that minimize the following expression: \code{abs(sqrt(x)-(nr)) + abs(sqrt(x)-(nc)) + abs(nr*nc-x)}, with output switching between nr-by-nc and nc-by-nr depending on the value of \code{tall}).
 #'
 #' @seealso See \code{\link{rbLib-package}} for package overview.
 #'

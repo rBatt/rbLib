@@ -8,6 +8,7 @@ before_install:
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
   - chmod 755 ./travis-tool.sh
   - ./travis-tool.sh bootstrap
+  - sudo apt-get install libgmp3-dev
 
 install:
   - ./travis-tool.sh install_deps
@@ -29,6 +30,5 @@ r_github_packages:
   - jimhester/covr
   
 r_binary_packages:
-  - gmp
   - ssh.utils
   - numbers

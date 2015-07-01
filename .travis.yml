@@ -28,6 +28,6 @@ r_apt_packages:
 r_github_packages:
   - jimhester/covr
   
-r_packages:
+r_binary_packages:
   - ssh.utils
   - numbers

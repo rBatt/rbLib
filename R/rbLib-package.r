@@ -25,6 +25,12 @@
 	#' \code{\link{get.layout}} \tab define \code{\link{layout}} matrix from dimensions and relative widths \cr
 #'	}
 #'
+#' @section Data Manipulation:
+#' Basic data manipulation tools
+#' \tabular{ll}{
+	#' \code{\link{roll.recycle}} \tab a rolling window that picks up at the beginning when it reaches the end \cr
+#'	}
+#'
 #' @docType package
 #' @name rbLib
 NULL

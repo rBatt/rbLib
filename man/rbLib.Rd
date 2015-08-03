@@ -42,6 +42,7 @@ Convenient functions for making graphs. Relies heavily on base graphics. Some fu
 Basic data manipulation tools
 \tabular{ll}{
 \code{\link{roll.recycle}} \tab a rolling window that picks up at the beginning when it reaches the end \cr
+\code{\link{renameNow}} \tab add current date-time to a character corresponding to a file name \cr
 	}
 }
 

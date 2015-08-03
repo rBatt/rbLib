@@ -4,16 +4,18 @@
 \alias{pull}
 \title{Pull remote files to local system}
 \usage{
-pull(path, remoteName, fileName = "", verbose = FALSE)
+pull(path, remoteName, fileName = "", verbose = FALSE, path2)
 }
 \arguments{
-\item{path}{Character string for path to be pulled, or path containing file to be pulled}
+\item{path}{Character string for path to be pulled, or path containing file to be pulled. If \code{path2} is specified, \code{path} refers only to the local destination.}
 
 \item{remoteName}{Character string for remote server in username@place.edu format. See \code{run.remote} in the package \code{ssh.utils}}
 
 \item{fileName}{Character string of file within \code{path} to be pulled. If \code{""}, all files in \code{path} are pulled}
 
 \item{verbose}{logical. print extra output.}
+
+\item{path2}{remote source path; if blank, \code{path2} is the remote equivalent of \code{path}}
 }
 \description{
 \code{pull} makes a local copy of a new or updated remote file(s)

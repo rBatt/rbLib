@@ -4,7 +4,7 @@
 \alias{prp}
 \title{Push, Run, then Pull}
 \usage{
-prp(path, scriptName, remoteName, verbose = FALSE, debugMode = FALSE)
+prp(path, scriptName, remoteName, verbose = FALSE, debugMode = FALSE, path2)
 }
 \arguments{
 \item{path}{Character string for path to be pulled, or path containing file to be pulled}
@@ -16,6 +16,8 @@ prp(path, scriptName, remoteName, verbose = FALSE, debugMode = FALSE)
 \item{verbose}{logical. print extra output.}
 
 \item{debugMode}{logical. whether the run should load a file called '.RData' present in the directory, and if it should save a file (image) by the same name on exit.}
+
+\item{path2}{remote path; if blank, \code{path2} is the remote equivalent of \code{path}}
 }
 \description{
 \code{prp} pushes local updates to remote, runs script remotely, then pulls remote updates to local

@@ -4,22 +4,24 @@
 \alias{push}
 \title{Push local files to a remote server}
 \usage{
-push(path, remoteName, fileName = "", verbose = FALSE)
+push(path, remoteName, fileName = "", verbose = FALSE, path2)
 }
 \arguments{
-\item{path}{Character string for path to be pushed, or path containing file to be pushed}
+\item{path}{Character string for path to be pushed, or path containing file to be pushed. If \code{path2} is specified, \code{path} refers only to local source path.}
 
 \item{remoteName}{Character string for remote server;}
 
 \item{fileName}{Character string of file within \code{path} to be pushed. If \code{""}, all files in \code{path} are pushed}
 
 \item{verbose}{logical. print extra output.}
+
+\item{path2}{remote destination path; if blank, \code{path2} is the remote equivalent of \code{path}}
 }
 \description{
 \code{push} makes a remote copy of a new or updated local file(s)
 }
 \details{
-Works via ssh and rsync. Can push all files in a folder, or a specific file in the specified path. The only files that are altered remotely are those that a newer locally (or only present locally). Will not delete a remote file if it isn't already present locally, and will not overwrite a remote file if the local version is older (or absent). Does not change local files. Assumes local and remote file paths are identical.
+Works via ssh and rsync. Can push all files in a folder, or a specific file in the specified path. The only files that are altered remotely are those that a newer locally (or only present locally). Will not delete a remote file if it isn't already present locally, and will not overwrite a remote file if the local version is older (or absent). Does not change local files. Assumes local and remote file paths are identical unless \code{path2} is specified.
 }
 \examples{
 \dontrun{

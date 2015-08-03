@@ -14,6 +14,6 @@
 
 renameNow <- function(x){
 	stopifnot(grepl("(\\.[^.]+$)",x))
-	datetime <- format.Date(Sys.time(), format="%Y-%d-%m_%H-%M-%S-%Z")
+	datetime <- format.Date(Sys.time(), format="%Y-%m-%d_%H-%M-%S-%Z")
 	gsub("(\\.[^.]+$)",paste0("_",datetime,"\\1"),x)
 }

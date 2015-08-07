@@ -162,7 +162,11 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE, path2){
 #' remoteName <- "ryanb@@amphiprion.deenr.rutgers.edu"
 #' prp(path, scriptName, remoteName, verbose=TRUE)
 #' }
-prp <- function(path, scriptName, remoteName, verbose=FALSE, debugMode=FALSE, path2){	
+prp <- function(path, scriptName, remoteName, verbose=FALSE, debugMode=FALSE, path2){
+	if(missing(path2)){
+		path2 <- gsub("&", "\\\\&", path, perl=TRUE)
+	}
+		
 	if(verbose){cat("pushing\n")}
 	push(path, remoteName, fileName=scriptName, verbose=verbose, path2=path2)
 

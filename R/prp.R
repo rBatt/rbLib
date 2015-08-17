@@ -171,7 +171,7 @@ prp <- function(path, scriptName, remoteName, verbose=FALSE, debugMode=FALSE, pa
 	push(path, remoteName, fileName=scriptName, verbose=verbose, path2=path2)
 
 	if(verbose){cat("running\n")}
-	run(scriptName, path=path2, remoteName, verbose=verbose, debugMode=debugMode)
+	run(scriptName, path=path, remoteName, verbose=verbose, debugMode=debugMode)
 	
 	if(verbose){cat("pulling\n")}
 	pull(path, remoteName, fileName="", verbose=verbose, path2=path2)

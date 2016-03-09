@@ -23,6 +23,7 @@
 	#' \code{\link{add.alpha}} \tab add transparency to a color \cr
 	#' \code{\link{auto.mfrow}} \tab automatically arrange panels in a figure \cr
 	#' \code{\link{get.layout}} \tab define \code{\link{layout}} matrix from dimensions and relative widths \cr
+	#'\code{\link{zCol}} \tab get colors from values \cr
 #'	}
 #'
 #' @section Data Manipulation:

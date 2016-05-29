@@ -38,6 +38,7 @@ params <- seq(0,1, by=0.25)
 ts.length <- 20
 n.sims <- 5
 roll.recycle(params, ts.length, n.sims) 
+
 }
 \seealso{
 See \code{\link{rbLib-package}} for package overview.

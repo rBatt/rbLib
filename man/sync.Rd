@@ -31,6 +31,7 @@ b <- "Dropbox/Cyanotopes/CyanoIso/" # omitting last slash creates extra copy
 exclude <- c(".git", "Data")
 (sync(a, b, exclude))
 }
+
 }
 \seealso{
 Use \code{\link{mirror}} if the contents of a master directory should be copied to a backup directory, potentially deleting files in the backup that are not contained in the master. See \code{\link{rbLib-package}} for package overview.

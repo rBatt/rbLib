@@ -31,6 +31,7 @@ to <- "Dropbox/Cyanotopes/CyanoIso/" # omitting last slash creates extra copy
 exclude <- c(".git", "Data")
 (mirror(from, to, exclude))
 }
+
 }
 \seealso{
 See \code{\link{sync}} for bidirectional copying w/o deletions (syncing). See \code{\link{rbLib-package}} for package overview.

@@ -33,7 +33,10 @@ Convenient functions for making graphs. Relies heavily on base graphics. Some fu
 \tabular{ll}{
 \code{\link{add.alpha}} \tab add transparency to a color \cr
 \code{\link{auto.mfrow}} \tab automatically arrange panels in a figure \cr
+\code{\link{combine_pdf}} \tab combine multiple pdf files into a single pdf, pages independently sized \cr
 \code{\link{get.layout}} \tab define \code{\link{layout}} matrix from dimensions and relative widths \cr
+\code{\link{polarGlyph}} \tab convert x-y data into polar coordinates, add circular glyph to figure \cr
+\code{\link{sparklines}} \tab add miniature time series at reference point in larger figure \cr
 \code{\link{zCol}} \tab get colors from values \cr
 }
 }
@@ -44,6 +47,6 @@ Basic data manipulation tools
 \tabular{ll}{
 \code{\link{roll.recycle}} \tab a rolling window that picks up at the beginning when it reaches the end \cr
 \code{\link{renameNow}} \tab add current date-time to a character corresponding to a file name \cr
-}
+	}
 }
 

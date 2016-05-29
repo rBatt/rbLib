@@ -17,6 +17,7 @@ The file extension is defined by the regular expression pattern \code{"(\\.[^.]+
 }
 \examples{
 renameNow(c("test1.csv","test2.txt"))
+
 }
 \seealso{
 See \code{\link{rbLib-package}} for package overview.

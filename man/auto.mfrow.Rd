@@ -33,6 +33,7 @@ par(mfrow=auto.mfrow(2, tall=TRUE), mar=c(2.5,2.5,0.25,0.25), mgp=c(1.15,0.25, 0
 plot(panels, xlab="Number of plots", ylab="number of panels")
 abline(a=0,b=1)
 plot(empty, xlab="Number of plots", ylab="number of empty panels", type="o")
+
 }
 \seealso{
 See \code{\link{rbLib-package}} for package overview.

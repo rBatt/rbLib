@@ -29,6 +29,7 @@ scriptName <- "reset.sim.R"
 remoteName <- "ryanb@amphiprion.deenr.rutgers.edu"
 prp(path, scriptName, remoteName, verbose=TRUE)
 }
+
 }
 \seealso{
 \code{\link{pull}} and \code{\link{push}} to sync files, and \code{\link{run}} to run script remotely.  See \code{\link{rbLib-package}} for overview.

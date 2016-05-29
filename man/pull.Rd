@@ -27,6 +27,7 @@ scriptName <- "reset.sim.R"
 remoteName <- "ryanb@amphiprion.deenr.rutgers.edu"
 (pull(path, remoteName, fileName=""))
 }
+
 }
 \seealso{
 \code{\link{push}} for the opposite process, \code{\link{run}} to run script remotely, and \code{\link{prp}} to push run pull. See \code{\link{rbLib-package}} for overview.

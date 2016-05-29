@@ -27,6 +27,7 @@ ba <- add.alpha("blue", alpha=0.25)
 ra <- add.alpha("red", alpha=1)
 cols <- colorRampPalette(c(ba, ra), alpha=TRUE)(N)
 plot(1:N, col=cols, pch=19)
+
 }
 \seealso{
 See \code{\link{rgb}}, \code{\link{colors}}, \code{\link{colorRampPalette}}, \code{\link{adjustcolor}} for base functions handling colors. See \code{\link{rbLib-package}} for package overview.

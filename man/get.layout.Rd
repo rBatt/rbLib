@@ -32,6 +32,7 @@ r.w <- get.layout(3, 3, c(1.5, 2, 2.5), TRUE) # integers of relative widths
 layout.mat <- matrix(rep(c(c.h), rep(r.w, ncol(c.h))), ncol=ncol(c.h))
 layout(layout.mat)
 for(i in 1:9){plot(rnorm(5))}
+
 }
 \seealso{
 See \code{\link{rbLib-package}} for package overview.

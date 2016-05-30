@@ -5,7 +5,7 @@
 #' @param x,y numeric vector of values for sparklines
 #' @param x_pt,y_pt numeric length 1 indicating coordinate to use as a reference for positioning sparkline
 #' @param y_align character indicating the portion of \code{y} to use for vertical alignment relative to reference coordinate
-#' @param x_align, same as \code{y_align}, except for \code{x} and horizontal alignment; fewer options than \code{y_align}
+#' @param x_align same as \code{y_align}, except for \code{x} and horizontal alignment; fewer options than \code{y_align}
 #' @param scale_xy Logical; if TRUE (default) \code{x} and \code{y} are rescaled to be the size of a character
 #' @param x_cex,y_cex numeric, scaling factor to adjust the size of the sparklines in either direction; does nothing if \code{scale_xy} is FALSE
 #' @param ax_sides Integer value(s) in 1:4 indicating the sides of the sparkline to be bordered by a solid 'axis' line; if \code{NULL} (default), no lines are drawn

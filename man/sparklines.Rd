@@ -16,7 +16,7 @@ sparklines(x, y, x_pt, y_pt, y_align = c("bot", "top", "mid", "left",
 
 \item{y_align}{character indicating the portion of \code{y} to use for vertical alignment relative to reference coordinate}
 
-\item{x_align, }{same as \code{y_align}, except for \code{x} and horizontal alignment; fewer options than \code{y_align}}
+\item{x_align}{same as \code{y_align}, except for \code{x} and horizontal alignment; fewer options than \code{y_align}}
 
 \item{scale_xy}{Logical; if TRUE (default) \code{x} and \code{y} are rescaled to be the size of a character}
 

@@ -10,7 +10,7 @@
 #' 
 #' export
 zCol <- function(nCols, Z){
-	cols <- colorRampPalette(c("#000099", "#00FEFF", "#45FE4F", "#FCFF00", "#FF9400", "#FF3100"))(nCols)
+	cols <- grDevices::colorRampPalette(c("#000099", "#00FEFF", "#45FE4F", "#FCFF00", "#FF9400", "#FF3100"))(nCols)
 	colVec_ind <- cut(Z, breaks=nCols)
 	colVec <- cols[colVec_ind]
 }

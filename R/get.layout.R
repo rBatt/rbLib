@@ -26,12 +26,12 @@
 #' 
 #' @export
 get.layout <- function(nr, nc, ratios, return_r=FALSE){
-	# require(numbers)
+	requireNamespace("numbers", quietly = TRUE)
 	stopifnot(nc>1)
 	stopifnot(length(ratios)==nc)
 	
-	ratios2 <- ratios * prod(mapply(function(x)contFrac(x)$rat[2], ratios))
-	r <- ratios2/mGCD(ratios2)
+	ratios2 <- ratios * prod(mapply(function(x)numbers::contFrac(x)$rat[2], ratios))
+	r <- ratios2/numbers::mGCD(ratios2)
 	
 	if(return_r){return(r)}
 	

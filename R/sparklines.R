@@ -19,7 +19,7 @@
 #' 
 #' @return Returns NULL invisibly
 #' 
-#' @seealso For another approach to adding miniaturized time series data to a specific location on a figure, see \code{\link{sparklines}}.
+#' @seealso For another approach to adding miniaturized time series data to a specific location on a figure, see \code{\link{polarGlyph}}.
 #' 
 #' @examples
 #' # fake data

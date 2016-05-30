@@ -70,6 +70,6 @@ for(i in 1:length(x)){
 
 }
 \seealso{
-For another approach to adding miniaturized time series data to a specific location on a figure, see \code{\link{sparklines}}.
+For another approach to adding miniaturized time series data to a specific location on a figure, see \code{\link{polarGlyph}}.
 }
 

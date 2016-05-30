@@ -13,8 +13,6 @@ zCol(nCols, Z)
 }
 \value{
 a vector of colors
-
-export
 }
 \description{
 Get colors based on values

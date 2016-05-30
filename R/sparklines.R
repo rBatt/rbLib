@@ -36,8 +36,16 @@
 #' # leading into and out of each point
 #' # of the big time series
 #' for(i in 1:length(x)){
-#' 	sparklines(x, y, y_pt=y[i]^2, x_pt=x[i]^2, y_align="right", x_align="right", ax_sides=c(1,2), col="red", awd=0.5)
-#' 	sparklines(x, y, y_pt=y[i]^2, x_pt=x[i]^2, y_align="left", x_align="left", ax_sides=c(1,4), col="blue", awd=0.5)
+#' 	xpt <- x[i]^2
+#' 	ypt <- y[i]^2
+#' 	sparklines(
+#' 		x, y, xpt, ypt,
+#' 		y_align="right", x_align="right", ax_sides=c(1,2), col="red", awd=0.5
+#' 	)
+#' 	sparklines(
+#' 		x, y, xpt, ypt,
+#' 		y_align="left", x_align="left", ax_sides=c(1,4), col="blue", awd=0.5
+#' 	)
 #' }
 #' 
 #' @export
@@ -50,8 +58,8 @@ sparklines <- function(x, y, x_pt, y_pt, y_align=c("bot","top","mid", "left", "r
 	
 	scale_fac <- function(type=c("x","y")){
 		type <- match.arg(type)
-		c1 <- mean(par("cin"))/par("pin")
-		switch(type, x=c1[1]*diff(par()$usr[1:2])*x_cex, y=c1[2]*diff(par()$usr[3:4])*y_cex)
+		c1 <- mean(graphics::par("cin"))/graphics::par("pin")
+		switch(type, x=c1[1]*diff(graphics::par()$usr[1:2])*x_cex, y=c1[2]*diff(graphics::par()$usr[3:4])*y_cex)
 	}
 	
 	set_xy <- function(type=c("x","y")){
@@ -89,11 +97,11 @@ sparklines <- function(x, y, x_pt, y_pt, y_align=c("bot","top","mid", "left", "r
 		adf <- data.frame(x0=xyc_adj[c(1,1,2,3),1], x1=xyc_adj[c(4,2,3,4),1], y0=xyc_adj[c(1,1,2,3),2], y1=xyc_adj[c(4,2,3,4),2])
 		
 		for(s in 1:length(ax_sides)){
-			do.call('segments', c(adf[ax_sides[s],],list(col=acol, lwd=awd)))
+			do.call(graphics::segments, c(adf[ax_sides[s],],list(col=acol, lwd=awd)))
 		}
 	}
 	
-	lines(xs, ys, col=col, lwd=lwd)
+	graphics::lines(xs, ys, col=col, lwd=lwd)
 	
 	invisible(NULL)
 }

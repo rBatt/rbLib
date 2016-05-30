@@ -56,8 +56,16 @@ plot(x^2, y^2, type='l')
 # leading into and out of each point
 # of the big time series
 for(i in 1:length(x)){
-	sparklines(x, y, y_pt=y[i]^2, x_pt=x[i]^2, y_align="right", x_align="right", ax_sides=c(1,2), col="red", awd=0.5)
-	sparklines(x, y, y_pt=y[i]^2, x_pt=x[i]^2, y_align="left", x_align="left", ax_sides=c(1,4), col="blue", awd=0.5)
+	xpt <- x[i]^2
+	ypt <- y[i]^2
+	sparklines(
+		x, y, xpt, ypt,
+		y_align="right", x_align="right", ax_sides=c(1,2), col="red", awd=0.5
+	)
+	sparklines(
+		x, y, xpt, ypt,
+		y_align="left", x_align="left", ax_sides=c(1,4), col="blue", awd=0.5
+	)
 }
 
 }

@@ -20,16 +20,19 @@
 #' @seealso For another approach to adding miniaturized time series data to a specific location on a figure, see \code{\link{sparklines}}.
 #' 
 #' @examples
-#' x <- sample(1:75, 50) #rnorm(50)
+#' x <- sample(1:75, 50)
 #' y <- cumsum(rnorm(50))[rank(x)] + x*0.05
 #' ctr_pt <- c(x[30], y[30])
 #' g.cex <- 0.75
-#' col <- adjustcolor("blue", 0.5)
+#' bcol <- adjustcolor("blue", 0.5)
+#' rcol <- adjustcolor("red", 0.5)
+#' rr1 <- c(0.5*pi,pi*1.5)
+#' rr2 <- c(1.5*pi,pi*2.5)
 #' 
 #' dev.new()
 #' plot(x[order(x)],y[order(x)],type='l')
-#' polarGlyph(x, y, ctr_pt, rad_range=c(0.5*pi,pi*1.5), g.cex=1, col=adjustcolor("red", 0.5), lwd=1, lcol="red")
-#' polarGlyph(x, y, ctr_pt, rad_range=c(1.5*pi,pi*2.5), g.cex=1, col=adjustcolor("blue", 0.5), lwd=1, lcol='blue')
+#' polarGlyph(x, y, ctr_pt, rad_range=rr1, g.cex=1, col=rcol, lwd=1, lcol="red")
+#' polarGlyph(x, y, ctr_pt, rad_range=rr2, g.cex=1, col=bcol, lwd=1, lcol='blue')
 #' 
 #' @export
 polarGlyph <- function(x, y, ctr_pt, rad_range=c(0,2*pi), g.cex=1, col="black", lwd=1, lcol="black"){
@@ -44,16 +47,15 @@ polarGlyph <- function(x, y, ctr_pt, rad_range=c(0,2*pi), g.cex=1, col="black", 
 	y <- y/max(y)
 	y <- y - min(y)
 
-	r <- y/max(y)#/10 #sqrt(x^2 + y^2)
-	# phi <- x/max(x)*2*pi #atan2(y, x)
+	r <- y/max(y)
 	rad_seq <- do.call('seq', c(as.list(rad_range),length.out=list(length(x))))
 	phi <- x/max(x)*diff(range(rad_seq)) + rad_seq[1]
 
-	yr <- diff(par()$usr[3:4])
-	xr <- diff(par()$usr[1:2])
-	cxy <- mean(par("cin"))/par("pin")*c(xr,yr)*g.cex #par("cxy") # par("cin")/par("pin")
+	yr <- diff(graphics::par()$usr[3:4])
+	xr <- diff(graphics::par()$usr[1:2])
+	cxy <- mean(graphics::par("cin"))/graphics::par("pin")*c(xr,yr)*g.cex
 	cx <- cxy[1]
-	cy <- cxy[2] #[2]
+	cy <- cxy[2]
 
 	pol_x <- r * cos(phi) * cx
 	pol_y <- r * sin(phi) * cy
@@ -63,8 +65,8 @@ polarGlyph <- function(x, y, ctr_pt, rad_range=c(0,2*pi), g.cex=1, col="black", 
 	yc <- ctr_pt[2]
 	
 	pseq <- do.call('seq', c(as.list(rad_range),length.out=list(100)))
-	polygon(c(xc+pol_x, rep(xc,len)), c(yc+pol_y, rep(yc, len)), col=col, border=NA)
-	lines(cos(pseq)*cx+xc, sin(pseq)*cy+yc, type='l', lwd=lwd, col=lcol)
+	graphics::polygon(c(xc+pol_x, rep(xc,len)), c(yc+pol_y, rep(yc, len)), col=col, border=NA)
+	graphics::lines(cos(pseq)*cx+xc, sin(pseq)*cy+yc, type='l', lwd=lwd, col=lcol)
 	
 	invisible(NULL)
 }

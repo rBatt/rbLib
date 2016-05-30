@@ -34,16 +34,19 @@ The glyph represents a time series that is plotted with a filled color between t
 The parameter \code{rad_range} controls how far around the centroid the glyph is wrapped, and the location of the start and end points. The values should be in increasing order, and the glyph is plotted in a counterclockwise direction. Use of this convention is not checked, and may produce surprising results if the radius range is not supplied accordingly.
 }
 \examples{
-x <- sample(1:75, 50) #rnorm(50)
+x <- sample(1:75, 50)
 y <- cumsum(rnorm(50))[rank(x)] + x*0.05
 ctr_pt <- c(x[30], y[30])
 g.cex <- 0.75
-col <- adjustcolor("blue", 0.5)
+bcol <- adjustcolor("blue", 0.5)
+rcol <- adjustcolor("red", 0.5)
+rr1 <- c(0.5*pi,pi*1.5)
+rr2 <- c(1.5*pi,pi*2.5)
 
 dev.new()
 plot(x[order(x)],y[order(x)],type='l')
-polarGlyph(x, y, ctr_pt, rad_range=c(0.5*pi,pi*1.5), g.cex=1, col=adjustcolor("red", 0.5), lwd=1, lcol="red")
-polarGlyph(x, y, ctr_pt, rad_range=c(1.5*pi,pi*2.5), g.cex=1, col=adjustcolor("blue", 0.5), lwd=1, lcol='blue')
+polarGlyph(x, y, ctr_pt, rad_range=rr1, g.cex=1, col=rcol, lwd=1, lcol="red")
+polarGlyph(x, y, ctr_pt, rad_range=rr2, g.cex=1, col=bcol, lwd=1, lcol='blue')
 
 }
 \seealso{

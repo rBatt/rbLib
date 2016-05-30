@@ -73,24 +73,21 @@ push <- function(path, remoteName, fileName="", verbose=FALSE, path2){
 #' 
 #' @export
 run <- function(scriptName, path, remoteName, verbose=FALSE, debugMode=FALSE){
-	# if(require(ssh.utils)){
-		# from remote, run script
-		rr.cmd.cd <- paste0("cd \'", path, "\'")
-		if(debugMode){
-			rr.cmd <- paste0("nohup R CMD BATCH ", scriptName, " &")
-		}else{
-			rr.cmd <- paste0("nohup R CMD BATCH --vanilla --no-save ", scriptName, " &")
-		}
-		blah <- run.remote(paste0(rr.cmd.cd, ";", rr.cmd), remote=remoteName)
-	
-		if(verbose){
-			blah
-		}else{
-			invisible(blah)
-		}
-	# }else{
-# 		print("Please install ssh.utils to run scripts remotely.")
-# 	}
+	requireNamespace("ssh.utils", quietly = TRUE)
+	# from remote, run script
+	rr.cmd.cd <- paste0("cd \'", path, "\'")
+	if(debugMode){
+		rr.cmd <- paste0("nohup R CMD BATCH ", scriptName, " &")
+	}else{
+		rr.cmd <- paste0("nohup R CMD BATCH --vanilla --no-save ", scriptName, " &")
+	}
+	blah <- ssh.utils::run.remote(paste0(rr.cmd.cd, ";", rr.cmd), remote=remoteName)
+
+	if(verbose){
+		blah
+	}else{
+		invisible(blah)
+	}
 }
 
 
@@ -116,7 +113,7 @@ run <- function(scriptName, path, remoteName, verbose=FALSE, debugMode=FALSE){
 #' 
 #' @export
 pull <- function(path, remoteName, fileName="", verbose=FALSE, path2){
-	ss1 <- fileSnapshot(path, full.names=TRUE)
+	ss1 <- utils::fileSnapshot(path, full.names=TRUE)
 	# from local, pull files updated by script
 	if(missing(path2)){
 		path2 <- gsub("&", "\\\\&", path, perl=TRUE)
@@ -136,8 +133,8 @@ pull <- function(path, remoteName, fileName="", verbose=FALSE, path2){
 	if(verbose){
 		cat(pull.sh, "\n")
 		system(pull.sh)
-		ss2 <- fileSnapshot(path, full.names=TRUE)
-		changedFiles(ss1, ss2)
+		ss2 <- utils::fileSnapshot(path, full.names=TRUE)
+		utils::changedFiles(ss1, ss2)
 	}else{
 		invisible(system(pull.sh))
 	}

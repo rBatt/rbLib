@@ -22,6 +22,7 @@
 #' \tabular{ll}{
 	#' \code{\link{add.alpha}} \tab add transparency to a color \cr
 	#' \code{\link{auto.mfrow}} \tab automatically arrange panels in a figure \cr
+	#' \code{\link{mapLegend}} \tab add a color scale legend to a figure \cr
 	#' \code{\link{combine_pdf}} \tab combine multiple pdf files into a single pdf, pages independently sized \cr
 	#' \code{\link{get.layout}} \tab define \code{\link{layout}} matrix from dimensions and relative widths \cr
 	#' \code{\link{polarGlyph}} \tab convert x-y data into polar coordinates, add circular glyph to figure \cr

@@ -37,7 +37,7 @@ v <- volcano
 v[v<=quantile(v,0.2)] <- NA # small values to NA (will plot white)
 v_cols <- zCol(256, 1:256)
 image(v, col=v_cols)
-zl <- range(v, na.rm=T)
+zl <- range(v, na.rm=TRUE)
 mapLegend(x=0.9, y=0.85, zlim=zl, cols=v_cols)
 mapLegend(x=0.975, y=0.075, zlim=zl, cols=v_cols, w=0.025, h=0.125)
 mapLegend(x=0.73, y=0.975, zlim=zl, cols=v_cols, w=0.125, h=0.025, horiz=TRUE)

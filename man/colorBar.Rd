@@ -7,7 +7,7 @@
 colorBar(bar1, bar2, cols, n = 256)
 }
 \arguments{
-\item{bar1, bar2}{length 4 vector containing x0,y0,x1,y1 elements (see \code{\link(segments)})}
+\item{bar1, bar2}{length 4 vector containing x0,y0,x1,y1 elements (see \code{\link{segments}})}
 
 \item{cols}{colors used in heat map figure}
 

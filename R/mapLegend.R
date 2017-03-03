@@ -90,6 +90,10 @@ mapLegend <- function(x=0.9, y=0.2, w=0.05, h=0.25, zlim, cols, horiz=FALSE, axS
 	lines(ax_line, lwd=1.5)
 	
 	# add axis labels
+	if(length(unique(zlim[!is.na(zlim)]))==1){
+		zlim <- zlim[!is.na(zlim)]
+		zlim <- sort(zlim + 0.1*zlim*c(-1,1))
+	}
 	zvals <- do.call('seq', c(as.list(zlim),list(length.out=nrow(bars))))
 	# ticks <- quantile(zvals, c(0, 1/4, 0.5, 3/4, 1)) #pretty(zvals, n=3)
 	ticks <- quantile(zvals, c(0.1, 0.5, 0.9)) #pretty(zvals, n=3)
